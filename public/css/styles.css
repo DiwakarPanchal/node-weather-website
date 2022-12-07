@@ -23,8 +23,9 @@ p{
 }
 
 .photograph {
-    width:250px;
+    width:100px;
     border:2px solid black;
+    margin-top: 20px;
 }
 
 .navMenu{
