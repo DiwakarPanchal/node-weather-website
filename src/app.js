@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
     res.render('about', {
         title : "About",
         heading : "About Me",
-        content : "Hi, I am Diwakar Panchal and this is my photograph.",
+        content : "Hi, I am Diwakar Panchal.",
         image_src : "/img/my-pic.jpg",
         name : "Diwakar Panchal"
     })
