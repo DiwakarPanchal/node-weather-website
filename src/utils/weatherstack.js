@@ -11,12 +11,12 @@ const weatherstack = (lat, long, location, units, callback) => {
             callback('There is some error while calling the API.', undefined)
         } else if(body.success === false){
             callback(body.error.info, undefined)
-        } else {
+        } else {console.log(body.current)
             const weather = body.current.weather_descriptions[0]
             const temperature = body.current.temperature
             const feelsLike = body.current.feelslike
             const precip = body.current.precip
-            callback(undefined, weather+ ' weather in '+ location +'.Temperature is '+temperature+ ' degrees and feels like '+feelsLike+' degrees.\n '+precip+'% chances of raining.')
+            callback(undefined, weather+ ' weather in '+ location +'.Temperature is '+temperature+ ' degrees and feels like '+feelsLike+' degrees.\n '+precip+'% chances of raining, Wind speed is '+body.current.wind_speed+' and humidity is '+body.current.humidity+'.')
         }
     })
 }
